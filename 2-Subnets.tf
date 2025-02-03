@@ -43,7 +43,7 @@ resource "aws_subnet" "public-us-east-1c" {
   }
 }
 
-#these are for private
+#these are for private subnets
 resource "aws_subnet" "private-us-east-1a" {
   vpc_id            = aws_vpc.app1.id
   cidr_block        = "10.190.11.0/24"
