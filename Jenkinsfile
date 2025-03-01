@@ -69,7 +69,7 @@ pipeline {
     }
     agent any
     tools { 
-        jfrog 'jfrog-cli-01'
+        jfrog 'jfrog-cli-1'
         }
         stages {
             stage ('Testing') {
@@ -78,9 +78,9 @@ pipeline {
                     jf 'c show'
                     jf 'rt ping'
                     sh 'touch test-file'
-                    jf 'rt u test-file jfrog-cli-01/'
+                    jf 'rt u test-file jfrog-cli-1/'
                     jf 'rt bp'
-                    jf 'rt dl jfrog-cli-01/test-file'
+                    jf 'rt dl jfrog-cli-1/test-file'
                     }
             }
         }
